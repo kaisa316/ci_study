@@ -1,10 +1,11 @@
 <?php
-require_once APPPATH.'commons/TestCommon.php';
 
 class Test extends CI_Controller {
 
 	public function index() {
-		echo 'hello world';	
+		//$this->load->service('TestService');
+		//$this->testservice->test();
+		echo 'xxxxx';
 	}
 
 
