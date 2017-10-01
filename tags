@@ -139,13 +139,21 @@ CI_Xmlrpc	system/libraries/Xmlrpc.php	/^class CI_Xmlrpc {$/;"	c	language:PHP
 CI_Xmlrpcs	system/libraries/Xmlrpcs.php	/^class CI_Xmlrpcs extends CI_Xmlrpc {$/;"	c	language:PHP	inherits:CI_Xmlrpc
 CI_Zip	system/libraries/Zip.php	/^class CI_Zip {$/;"	c	language:PHP
 DB	system/database/DB.php	/^function &DB($params = '', $query_builder_override = NULL)$/;"	f	language:PHP	signature:($params = '', $query_builder_override = NULL)
+MY_Loader	application/core/MY_Loader.php	/^class MY_Loader extends CI_Loader {$/;"	c	language:PHP	inherits:CI_Loader
+MY_Service	application/core/MY_Service.php	/^class MY_Service {$/;"	c	language:PHP
 SessionHandlerInterface	system/libraries/Session/SessionHandlerInterface.php	/^interface SessionHandlerInterface {$/;"	i	language:PHP
+Test	application/controllers/test/Test.php	/^class Test extends CI_Controller {$/;"	c	language:PHP	inherits:CI_Controller
+TestCommon	application/models/commons/TestCommon.php	/^class TestCommon {$/;"	c	language:PHP
+TestService	application/services/TestService.php	/^class TestService extends MY_Service {$/;"	c	language:PHP	inherits:MY_Service
+Test_model	application/models/Test_model.php	/^class Test_model extends CI_Model {$/;"	c	language:PHP	inherits:CI_Model
 Welcome	application/controllers/Welcome.php	/^class Welcome extends CI_Controller {$/;"	c	language:PHP	inherits:CI_Controller
 XML_RPC_Client	system/libraries/Xmlrpc.php	/^class XML_RPC_Client extends CI_Xmlrpc$/;"	c	language:PHP	inherits:CI_Xmlrpc
 XML_RPC_Message	system/libraries/Xmlrpc.php	/^class XML_RPC_Message extends CI_Xmlrpc$/;"	c	language:PHP	inherits:CI_Xmlrpc
 XML_RPC_Response	system/libraries/Xmlrpc.php	/^class XML_RPC_Response$/;"	c	language:PHP
 XML_RPC_Values	system/libraries/Xmlrpc.php	/^class XML_RPC_Values extends CI_Xmlrpc$/;"	c	language:PHP	inherits:CI_Xmlrpc
 __call	system/libraries/Driver.php	/^	public function __call($method, $args = array())$/;"	f	language:PHP	class:CI_Driver	access:public	signature:($method, $args = array())
+__construct	application/core/MY_Loader.php	/^	public function __construct() {$/;"	f	language:PHP	class:MY_Loader	access:public	signature:()
+__construct	application/models/commons/TestCommon.php	/^	public function __construct() {$/;"	f	language:PHP	class:TestCommon	access:public	signature:()
 __construct	system/core/Config.php	/^	public function __construct()$/;"	f	language:PHP	class:CI_Config	access:public	signature:()
 __construct	system/core/Controller.php	/^	public function __construct()$/;"	f	language:PHP	class:CI_Controller	access:public	signature:()
 __construct	system/core/Exceptions.php	/^	public function __construct()$/;"	f	language:PHP	class:CI_Exceptions	access:public	signature:()
@@ -233,6 +241,7 @@ __construct	system/libraries/Zip.php	/^	public function __construct()$/;"	f	lang
 __destruct	system/libraries/Cache/drivers/Cache_memcached.php	/^	public function __destruct()$/;"	f	language:PHP	class:CI_Cache_memcached	access:public	signature:()
 __destruct	system/libraries/Cache/drivers/Cache_redis.php	/^	public function __destruct()$/;"	f	language:PHP	class:CI_Cache_redis	access:public	signature:()
 __destruct	system/libraries/Email.php	/^	public function __destruct()$/;"	f	language:PHP	class:CI_Email	access:public	signature:()
+__get	application/core/MY_Service.php	/^	function __get($key)$/;"	f	language:PHP	class:MY_Service	signature:($key)
 __get	system/core/Input.php	/^	public function __get($name)$/;"	f	language:PHP	class:CI_Input	access:public	signature:($name)
 __get	system/core/Model.php	/^	public function __get($key)$/;"	f	language:PHP	class:CI_Model	access:public	signature:($key)
 __get	system/libraries/Driver.php	/^	public function __get($child)$/;"	f	language:PHP	class:CI_Driver_Library	access:public	signature:($child)
@@ -1011,6 +1020,8 @@ decrement	system/libraries/Cache/drivers/Cache_redis.php	/^	public function decr
 decrement	system/libraries/Cache/drivers/Cache_wincache.php	/^	public function decrement($id, $offset = 1)$/;"	f	language:PHP	class:CI_Cache_wincache	access:public	signature:($id, $offset = 1)
 decrypt	system/libraries/Encryption.php	/^	public function decrypt($data, array $params = NULL)$/;"	f	language:PHP	class:CI_Encryption	access:public	signature:($data, array $params = NULL)
 default_template	system/libraries/Calendar.php	/^	public function default_template()$/;"	f	language:PHP	class:CI_Calendar	access:public	signature:()
+delete	application/controllers/test/Test.php	/^	public function delete() {$/;"	f	language:PHP	class:Test	access:public	signature:()
+delete	application/models/Test_model.php	/^	public function delete() {$/;"	f	language:PHP	class:Test_model	access:public	signature:()
 delete	system/database/DB_cache.php	/^	public function delete($segment_one = '', $segment_two = '')$/;"	f	language:PHP	class:CI_DB_Cache	access:public	signature:($segment_one = '', $segment_two = '')
 delete	system/database/DB_query_builder.php	/^	public function delete($table = '', $where = '', $limit = NULL, $reset_data = TRUE)$/;"	f	language:PHP	class:CI_DB_query_builder	access:public	signature:($table = '', $where = '', $limit = NULL, $reset_data = TRUE)
 delete	system/libraries/Cache/Cache.php	/^	public function delete($id)$/;"	f	language:PHP	class:CI_Cache	access:public	signature:($id)
@@ -1198,6 +1209,8 @@ gd_version	system/libraries/Image_lib.php	/^	public function gd_version()$/;"	f	
 generate	system/libraries/Calendar.php	/^	public function generate($year = '', $month = '', $data = array())$/;"	f	language:PHP	class:CI_Calendar	access:public	signature:($year = '', $month = '', $data = array())
 generate	system/libraries/Table.php	/^	public function generate($table_data = NULL)$/;"	f	language:PHP	class:CI_Table	access:public	signature:($table_data = NULL)
 generate_json	system/libraries/Javascript.php	/^	public function generate_json($result = NULL, $match_array_type = FALSE)$/;"	f	language:PHP	class:CI_Javascript	access:public	signature:($result = NULL, $match_array_type = FALSE)
+get	application/controllers/test/Test.php	/^	public function get() {$/;"	f	language:PHP	class:Test	access:public	signature:()
+get	application/models/Test_model.php	/^	public function get() {$/;"	f	language:PHP	class:Test_model	access:public	signature:()
 get	system/core/Input.php	/^	public function get($index = NULL, $xss_clean = NULL)$/;"	f	language:PHP	class:CI_Input	access:public	signature:($index = NULL, $xss_clean = NULL)
 get	system/database/DB_query_builder.php	/^	public function get($table = '', $limit = NULL, $offset = NULL)$/;"	f	language:PHP	class:CI_DB_query_builder	access:public	signature:($table = '', $limit = NULL, $offset = NULL)
 get	system/libraries/Cache/Cache.php	/^	public function get($id)$/;"	f	language:PHP	class:CI_Cache	access:public	signature:($id)
@@ -1246,12 +1259,16 @@ get_package_paths	system/core/Loader.php	/^	public function get_package_paths($i
 get_post	system/core/Input.php	/^	public function get_post($index, $xss_clean = NULL)$/;"	f	language:PHP	class:CI_Input	access:public	signature:($index, $xss_clean = NULL)
 get_random_bytes	system/core/Security.php	/^	public function get_random_bytes($length)$/;"	f	language:PHP	class:CI_Security	access:public	signature:($length)
 get_request_header	system/core/Input.php	/^	public function get_request_header($index, $xss_clean = FALSE)$/;"	f	language:PHP	class:CI_Input	access:public	signature:($index, $xss_clean = FALSE)
+get_sql	application/controllers/test/Test.php	/^	public function get_sql() {$/;"	f	language:PHP	class:Test	access:public	signature:()
+get_sql	application/models/Test_model.php	/^	public function get_sql() {$/;"	f	language:PHP	class:Test_model	access:public	signature:()
 get_temp_keys	system/libraries/Session/Session.php	/^	public function get_temp_keys()$/;"	f	language:PHP	class:CI_Session	access:public	signature:()
 get_total_days	system/libraries/Calendar.php	/^	public function get_total_days($month, $year)$/;"	f	language:PHP	class:CI_Calendar	access:public	signature:($month, $year)
 get_userdata	system/libraries/Session/Session.php	/^	public function &get_userdata()$/;"	f	language:PHP	class:CI_Session	access:public	signature:()
 get_var	system/core/Loader.php	/^	public function get_var($key)$/;"	f	language:PHP	class:CI_Loader	access:public	signature:($key)
 get_vars	system/core/Loader.php	/^	public function get_vars()$/;"	f	language:PHP	class:CI_Loader	access:public	signature:()
 get_where	system/database/DB_query_builder.php	/^	public function get_where($table = '', $where = NULL, $limit = NULL, $offset = NULL)$/;"	f	language:PHP	class:CI_DB_query_builder	access:public	signature:($table = '', $where = NULL, $limit = NULL, $offset = NULL)
+get_xx	application/controllers/test/Test.php	/^	public function get_xx() {$/;"	f	language:PHP	class:Test	access:public	signature:()
+get_xx	application/models/Test_model.php	/^	public function get_xx() {$/;"	f	language:PHP	class:Test_model	access:public	signature:()
 get_zip	system/libraries/Zip.php	/^	public function get_zip()$/;"	f	language:PHP	class:CI_Zip	access:public	signature:()
 gmt_to_local	system/helpers/date_helper.php	/^	function gmt_to_local($time = '', $timezone = 'UTC', $dst = FALSE)$/;"	f	language:PHP	signature:($time = '', $timezone = 'UTC', $dst = FALSE)
 greater_than	system/libraries/Form_validation.php	/^	public function greater_than($str, $min)$/;"	f	language:PHP	class:CI_Form_validation	access:public	signature:($str, $min)
@@ -1298,6 +1315,7 @@ increment	system/libraries/Cache/drivers/Cache_redis.php	/^	public function incr
 increment	system/libraries/Cache/drivers/Cache_wincache.php	/^	public function increment($id, $offset = 1)$/;"	f	language:PHP	class:CI_Cache_wincache	access:public	signature:($id, $offset = 1)
 increment_string	system/helpers/string_helper.php	/^	function increment_string($str, $separator = '_', $first = 1)$/;"	f	language:PHP	signature:($str, $separator = '_', $first = 1)
 index	application/controllers/Welcome.php	/^	public function index()$/;"	f	language:PHP	class:Welcome	access:public	signature:()
+index	application/controllers/test/Test.php	/^	public function index() {$/;"	f	language:PHP	class:Test	access:public	signature:()
 index_page	system/helpers/url_helper.php	/^	function index_page()$/;"	f	language:PHP	signature:()
 initialize	system/core/Loader.php	/^	public function initialize()$/;"	f	language:PHP	class:CI_Loader	access:public	signature:()
 initialize	system/database/DB_driver.php	/^	public function initialize()$/;"	f	language:PHP	class:CI_DB_driver	access:public	signature:()
@@ -1312,6 +1330,8 @@ initialize	system/libraries/Xmlrpc.php	/^	public function initialize($config = a
 initialize	system/libraries/Xmlrpcs.php	/^	public function initialize($config = array())$/;"	f	language:PHP	class:CI_Xmlrpcs	access:public	signature:($config = array())
 inline	system/libraries/Javascript.php	/^	public function inline($script, $cdata = TRUE)$/;"	f	language:PHP	class:CI_Javascript	access:public	signature:($script, $cdata = TRUE)
 input_stream	system/core/Input.php	/^	public function input_stream($index = NULL, $xss_clean = NULL)$/;"	f	language:PHP	class:CI_Input	access:public	signature:($index = NULL, $xss_clean = NULL)
+insert	application/controllers/test/Test.php	/^	public function insert() {$/;"	f	language:PHP	class:Test	access:public	signature:()
+insert	application/models/Test_model.php	/^	public function insert() {$/;"	f	language:PHP	class:Test_model	access:public	signature:()
 insert	system/database/DB_query_builder.php	/^	public function insert($table = '', $set = NULL, $escape = NULL)$/;"	f	language:PHP	class:CI_DB_query_builder	access:public	signature:($table = '', $set = NULL, $escape = NULL)
 insert	system/libraries/Cart.php	/^	public function insert($items = array())$/;"	f	language:PHP	class:CI_Cart	access:public	signature:($items = array())
 insert_batch	system/database/DB_query_builder.php	/^	public function insert_batch($table, $set = NULL, $escape = NULL, $batch_size = 100)$/;"	f	language:PHP	class:CI_DB_query_builder	access:public	signature:($table, $set = NULL, $escape = NULL, $batch_size = 100)
@@ -1510,6 +1530,7 @@ or_where_not_in	system/database/DB_query_builder.php	/^	public function or_where
 order_by	system/database/DB_query_builder.php	/^	public function order_by($orderby, $direction = '', $escape = NULL)$/;"	f	language:PHP	class:CI_DB_query_builder	access:public	signature:($orderby, $direction = '', $escape = NULL)
 order_by	system/database/drivers/pdo/subdrivers/pdo_pgsql_driver.php	/^	public function order_by($orderby, $direction = '', $escape = NULL)$/;"	f	language:PHP	class:CI_DB_pdo_pgsql_driver	access:public	signature:($orderby, $direction = '', $escape = NULL)
 order_by	system/database/drivers/postgre/postgre_driver.php	/^	public function order_by($orderby, $direction = '', $escape = NULL)$/;"	f	language:PHP	class:CI_DB_postgre_driver	access:public	signature:($orderby, $direction = '', $escape = NULL)
+out_common	application/controllers/test/Test.php	/^	public function out_common() {$/;"	f	language:PHP	class:Test	access:public	signature:()
 output	system/libraries/Javascript.php	/^	public function output($js)$/;"	f	language:PHP	class:CI_Javascript	access:public	signature:($js)
 output_parameters	system/libraries/Xmlrpc.php	/^	public function output_parameters(array $array = array())$/;"	f	language:PHP	class:XML_RPC_Message	access:public	signature:(array $array = array())
 overlay_watermark	system/libraries/Image_lib.php	/^	public function overlay_watermark()$/;"	f	language:PHP	class:CI_Image_lib	access:public	signature:()
@@ -1636,6 +1657,7 @@ serializeval	system/libraries/Xmlrpc.php	/^	public function serializeval($o)$/;"
 serve	system/libraries/Xmlrpcs.php	/^	public function serve()$/;"	f	language:PHP	class:CI_Xmlrpcs	access:public	signature:()
 server	system/core/Input.php	/^	public function server($index, $xss_clean = NULL)$/;"	f	language:PHP	class:CI_Input	access:public	signature:($index, $xss_clean = NULL)
 server	system/libraries/Xmlrpc.php	/^	public function server($url, $port = 80, $proxy = FALSE, $proxy_port = 8080)$/;"	f	language:PHP	class:CI_Xmlrpc	access:public	signature:($url, $port = 80, $proxy = FALSE, $proxy_port = 8080)
+service	application/core/MY_Loader.php	/^	public function service($service)$/;"	f	language:PHP	class:MY_Loader	access:public	signature:($service)
 sess_destroy	system/libraries/Session/Session.php	/^	public function sess_destroy()$/;"	f	language:PHP	class:CI_Session	access:public	signature:()
 sess_regenerate	system/libraries/Session/Session.php	/^	public function sess_regenerate($destroy = FALSE)$/;"	f	language:PHP	class:CI_Session	access:public	signature:($destroy = FALSE)
 set	system/database/DB_query_builder.php	/^	public function set($key, $value = '', $escape = NULL)$/;"	f	language:PHP	class:CI_DB_query_builder	access:public	signature:($key, $value = '', $escape = NULL)
@@ -1757,6 +1779,9 @@ system_url	system/core/Config.php	/^	public function system_url()$/;"	f	language
 table_exists	system/database/DB_driver.php	/^	public function table_exists($table_name)$/;"	f	language:PHP	class:CI_DB_driver	access:public	signature:($table_name)
 tablesorter	system/libraries/Javascript/Jquery.php	/^	public function tablesorter($table = '', $options = '')$/;"	f	language:PHP	class:CI_Jquery	access:public	signature:($table = '', $options = '')
 tempdata	system/libraries/Session/Session.php	/^	public function tempdata($key = NULL)$/;"	f	language:PHP	class:CI_Session	access:public	signature:($key = NULL)
+test	application/models/commons/TestCommon.php	/^	public function test() {$/;"	f	language:PHP	class:TestCommon	access:public	signature:()
+test	application/services/TestService.php	/^	public function test() {$/;"	f	language:PHP	class:TestService	access:public	signature:()
+test_common	application/controllers/test/Test.php	/^	public function test_common() {$/;"	f	language:PHP	class:Test	access:public	signature:()
 text_watermark	system/libraries/Image_lib.php	/^	public function text_watermark()$/;"	f	language:PHP	class:CI_Image_lib	access:public	signature:()
 timeout	system/libraries/Xmlrpc.php	/^	public function timeout($seconds = 5)$/;"	f	language:PHP	class:CI_Xmlrpc	access:public	signature:($seconds = 5)
 timespan	system/helpers/date_helper.php	/^	function timespan($seconds = 1, $time = '', $units = 7)$/;"	f	language:PHP	signature:($seconds = 1, $time = '', $units = 7)
@@ -1778,6 +1803,8 @@ trans_rollback	system/database/DB_driver.php	/^	public function trans_rollback()
 trans_start	system/database/DB_driver.php	/^	public function trans_start($test_mode = FALSE)$/;"	f	language:PHP	class:CI_DB_driver	access:public	signature:($test_mode = FALSE)
 trans_status	system/database/DB_driver.php	/^	public function trans_status()$/;"	f	language:PHP	class:CI_DB_driver	access:public	signature:()
 trans_strict	system/database/DB_driver.php	/^	public function trans_strict($mode = TRUE)$/;"	f	language:PHP	class:CI_DB_driver	access:public	signature:($mode = TRUE)
+transaction	application/controllers/test/Test.php	/^	public function transaction() {$/;"	f	language:PHP	class:Test	access:public	signature:()
+transaction	application/models/Test_model.php	/^	public function transaction() {$/;"	f	language:PHP	class:Test_model	access:public	signature:()
 trim_slashes	system/helpers/string_helper.php	/^	function trim_slashes($str)$/;"	f	language:PHP	signature:($str)
 truncate	system/database/DB_query_builder.php	/^	public function truncate($table = '')$/;"	f	language:PHP	class:CI_DB_query_builder	access:public	signature:($table = '')
 ui	system/libraries/Javascript/Jquery.php	/^	public function ui($src, $relative = FALSE)$/;"	f	language:PHP	class:CI_Jquery	access:public	signature:($src, $relative = FALSE)
@@ -1790,6 +1817,8 @@ unmark_flash	system/libraries/Session/Session.php	/^	public function unmark_flas
 unmark_temp	system/libraries/Session/Session.php	/^	public function unmark_temp($key)$/;"	f	language:PHP	class:CI_Session	access:public	signature:($key)
 unset_tempdata	system/libraries/Session/Session.php	/^	public function unset_tempdata($key)$/;"	f	language:PHP	class:CI_Session	access:public	signature:($key)
 unset_userdata	system/libraries/Session/Session.php	/^	public function unset_userdata($key)$/;"	f	language:PHP	class:CI_Session	access:public	signature:($key)
+update	application/controllers/test/Test.php	/^	public function update() {$/;"	f	language:PHP	class:Test	access:public	signature:()
+update	application/models/Test_model.php	/^	public function update() {$/;"	f	language:PHP	class:Test_model	access:public	signature:()
 update	system/database/DB_query_builder.php	/^	public function update($table = '', $set = NULL, $where = NULL, $limit = NULL)$/;"	f	language:PHP	class:CI_DB_query_builder	access:public	signature:($table = '', $set = NULL, $where = NULL, $limit = NULL)
 update	system/libraries/Cart.php	/^	public function update($items = array())$/;"	f	language:PHP	class:CI_Cart	access:public	signature:($items = array())
 update	system/libraries/Javascript.php	/^	public function update($element = 'this', $speed = '', $callback = '')$/;"	f	language:PHP	class:CI_Javascript	access:public	signature:($element = 'this', $speed = '', $callback = '')

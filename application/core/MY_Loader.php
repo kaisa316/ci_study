@@ -56,9 +56,15 @@ class MY_Loader extends CI_Loader {
 		}  
 		require_once(APPPATH.'services/'.$path.$service.'.php');
 
+		//运用反射，动态创建类及构造函数参数
+		$reflect = new ReflectionClass($service);
+		$params = func_get_args();
+		array_shift($params);//去掉类名
+		$obj =  $reflect->newInstanceArgs($params);
+		//reflect end
 		$CI = & get_instance();
 		$lower_service = strtolower($service);
-		$CI->$lower_service = new $service();
+		$CI->$lower_service = $obj;
 
 		$this->_ci_services[] = $service;
 	}
