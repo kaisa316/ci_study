@@ -11,8 +11,9 @@ class Redis_test extends CI_Controller {
 
 
 	public function test() {
-		$this->hash_test();
+		//$this->hash_test();
 		//$this->string_test();
+		$this->set_test();
 	}	
 
 	private function hash_test() {
@@ -60,7 +61,13 @@ scid 2003 => {scid=2003,name=,img=>}
 	}
 
 	private function set_test() {
-	
+		$this->redis->sadd('snums',1,2,3,4);	
+		$this->redis->sadd('sword',1,2,'a','b');	
+		//取差集，在snums集合中而不在sword集合中的数据
+		$value = $this->redis->sdiff('snums','sword');
+		print_r($value);
+		$value2 = $this->redis->sInter('snums','sword');
+		print_r($value2);
 		
 	}
 
