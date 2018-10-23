@@ -4,6 +4,11 @@
 class Test_model extends CI_Model {
 	const tbl_name = 'test';
 
+
+	public function get_hello() {
+		echo 'hello world';
+	}
+
 	public function get() {
 		$this->load->database();
 		//$db = $this->db->select(['name','id'])->where('name','lisi')->where('id >',3)->get(self::tbl_name);

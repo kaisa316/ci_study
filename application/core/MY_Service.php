@@ -1,4 +1,5 @@
 <?php
+namespace Application\core;
 /**
  * service base class
  */

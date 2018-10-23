@@ -25,6 +25,10 @@ Class RollingCurlX {
         $this->_curl_version = curl_version()['version'];
     }
 
+	function test_aa() {
+		echo 'hello autoload';
+	}
+
     public function setMaxConcurrent($max_requests) {
         if($max_requests > 0) {
             $this->_maxConcurrent = $max_requests;
