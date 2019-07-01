@@ -2,8 +2,14 @@
 
 
 
-class Test extends CI_Controller {
-
+class Test extends MY_Controller {
+	
+	public function sentry() {
+		//Sentry\init(['dsn' => 'https://c548e5b8a4e24806b12b554f4a199ea7@sentry.io/1370870' ]);
+		$this->ddd();	
+		//throw new Exception('test,test');
+	}
+	
 	public function info() {
 		phpinfo();
 	}
@@ -47,11 +53,7 @@ class Test extends CI_Controller {
 		echo '<br />';
 	}
 
-	public function sentry() {
-	}
 
-
-	
 
 }
 
