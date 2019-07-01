@@ -313,3 +313,11 @@ switch (ENVIRONMENT)
  * And away we go...
  */
 require_once BASEPATH.'core/CodeIgniter.php';
+
+//cust by kaisa316 begin
+$client = new Raven_Client('https://c548e5b8a4e24806b12b554f4a199ea7@sentry.io/1370870');
+$error_handler = new Raven_ErrorHandler($client);
+$error_handler->registerExceptionHandler();
+$error_handler->registerErrorHandler();
+$error_handler->registerShutdownFunction();
+//cust by kaisa316 end

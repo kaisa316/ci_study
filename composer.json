@@ -13,7 +13,8 @@
 	"require": {
 		"php": ">=5.2.4",
 		"monolog/monolog":"1.*",
-		"jmathai/php-multi-curl": "dev-master"
+		"jmathai/php-multi-curl": "dev-master",
+		"sentry/sdk": "^2.0"
 	},
 	"autoload": {
         "psr-4": {"Application\\": "application/"},
