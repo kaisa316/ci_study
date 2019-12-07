@@ -9,6 +9,11 @@ class Test extends MY_Controller {
 		$this->ddd();	
 		//throw new Exception('test,test');
 	}
+
+	public function test_db() {
+		$this->load->model('test_model');
+		$this->test_model->get();
+	}
 	
 	public function info() {
 		phpinfo();
